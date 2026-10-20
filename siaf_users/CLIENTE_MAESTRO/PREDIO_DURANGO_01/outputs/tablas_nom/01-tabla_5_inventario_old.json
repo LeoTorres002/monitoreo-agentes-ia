@@ -1,0 +1,8 @@
+{
+    "cliente": "CLIENTE_MAESTRO",
+    "proyecto": "PREDIO_DURANGO_01",
+    "existencias_totales_m3": 306.870867534,
+    "error_muestreo_pct": 16.58,
+    "cumple_nom_152": false,
+    "conteo_arboles": 120
+}

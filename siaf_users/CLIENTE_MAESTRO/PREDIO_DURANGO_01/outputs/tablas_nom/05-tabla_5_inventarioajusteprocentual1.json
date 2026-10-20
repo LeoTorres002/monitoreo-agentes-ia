@@ -1,0 +1,13 @@
+{
+    "resultados_tecnicos": {
+        "vta_m3": 306.87,
+        "error_pct": 16.58,
+        "sitios": 120,
+        "superficie_informada_ha": 80.0
+    },
+    "dictamen_ia": {
+        "limite_nom_aplicado": "15.0% (Numeral 4.9.2)",
+        "cumple_norma": false,
+        "analisis_profesional": "Dictamen Profesional:\n\nEn virtud de la Norma Oficial Mexicana NOM-152, en el numeral 4.9.2, que establece los límites para el error en la determinación de la superficie de un predio, se considera que el proyecto actual no cumple con dichos límites.\n\nLa superficie del predio es de 80.0 hectáreas, lo que la coloca dentro de la categoría de predios ≤ 95 ha, según el numeral mencionado. En este caso, el error máximo permitido es de 15.0%.\n\nSin embargo, el error calculado en el proyecto actual es del 16.58%, lo que supera el límite establecido. Esto indica que la superficie estimada no coincide con la realidad.\n\nEn consecuencia, se considera que el proyecto actual NO CUMPLE con los requisitos establecidos en la Norma Oficial Mexicana NOM-152.\n\nRecomendación Técnica:\n\nPara que el proyecto cumpla con los límites establecidos, es recomendable realizar un ajuste en el método de medición o utilizar técnicas de verificación para mejorar la precisión y reducir el error. Esto podrá incluir una remedicación de la superficie utilizando métodos más precisos, como levantamientos topográficos, ortofotografía o drones, entre otros.\n\nEspero que esta evaluación sea útil para tomar medidas correctivas y asegurar la calidad del proyecto."
+    }
+}

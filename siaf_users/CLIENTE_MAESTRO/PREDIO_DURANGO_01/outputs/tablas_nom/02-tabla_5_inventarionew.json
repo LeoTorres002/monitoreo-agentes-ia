@@ -1,0 +1,13 @@
+{
+    "metadatos": {
+        "cliente": "CLIENTE_MAESTRO",
+        "proyecto": "PREDIO_DURANGO_01",
+        "norma_aplicada": "NOM-152-SEMARNAT-2023"
+    },
+    "resultados_tecnicos": {
+        "existencias_totales_m3": 306.87,
+        "error_muestreo_pct": 16.58,
+        "conteo_sitios": 120
+    },
+    "dictamen_legal": {
+        "cumple_norma": 

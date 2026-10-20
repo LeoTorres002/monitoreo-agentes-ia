@@ -1,0 +1,13 @@
+{
+    "resultados_tecnicos": {
+        "vta_m3": 306.87,
+        "error_pct": 16.58,
+        "sitios": 120,
+        "superficie_informada_ha": 1500.0
+    },
+    "dictamen_ia": {
+        "limite_nom_aplicado": "10.0% (Numeral 4.9.2)",
+        "cumple_norma": false,
+        "analisis_profesional": "Dictamen Profesional:\n\nEn virtud de los requerimientos establecidos en la Norma Oficial Mexicana NOM-152, numeral 4.9.2, relativa a la evaluación de la superficie de predios forestales, se establece que para superficies mayores a 95 hectáreas el error máximo permitido es del 10%, mientras que para superficies menores o iguales a 95 hectáreas es del 15%.\n\nEn el proyecto actual, se presenta un error calculado de 16.58% en una superficie total de 1500 hectáreas, lo que supera el límite máximo permitido del 10%. Como consecuencia, no cumple con los requerimientos establecidos.\n\nRecomendación Técnica:\n\nPara lograr la certificación y cumplir con las normas regulatorias, se recomienda realizar un ajuste en la metodología de estimación de la superficie forestal para reducir el error calculado. Esto puede ser alcanzado mediante la revisión y mejora de los métodos de campo y oficina utilizados para determinar la superficie, como por ejemplo, la implementación de tecnologías geoespaciales o la toma de muestreos más precisos.\n\nEn conclusión, es fundamental que se tome medidas correctivas para mejorar la precisión en la estimación de la superficie forestal y cumplir con los requisitos establecidos por la norma."
+    }
+}

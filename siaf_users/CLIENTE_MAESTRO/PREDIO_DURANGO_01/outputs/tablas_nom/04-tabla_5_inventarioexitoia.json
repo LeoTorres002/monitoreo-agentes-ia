@@ -1,0 +1,11 @@
+{
+    "resultados_tecnicos": {
+        "vta_m3": 306.87,
+        "error_pct": 16.58,
+        "sitios": 120
+    },
+    "dictamen_ia": {
+        "cumple_norma": false,
+        "analisis_profesional": "Como ingeniero forestal en Durango, me esfuerzo por analizar los datos de inventario que me presentan un problema significativo. El Error 16.58% indica que hay una diferencia considerable entre lo esperado y lo encontrado en el inventario.\n\nSegún la NOM-152 (Norma Oficial Mexicana sobre Inventarios Forestales), el estado \"NO CUMPLE\" se aplica cuando el error es mayor o igual al 15%. En este caso, el error supera ese umbral, lo que significa que el inventario no cumple con los estándares establecidos.\n\nLa razón por la que NO CUMPLE se debe a que hay una diferencia significativa entre la cantidad de árboles o hectáreas forestales registradas en el inventario y la realidad. Esto puede deberse a varios factores, como:\n\n* Inexactitudes en la medición o conteo de los árboles.\n* Variabilidad natural de la vegetación forestal.\n* Cambios en la cobertura arbórea debido a disturbios naturales (inundaciones, sequías) o humanos (quemados, tala).\n\nRecomendación técnica profesional:\n\nPara corregir este problema y lograr un inventario que cumpla con los estándares, se recomienda realizar una nueva medición o conteo de los árboles en el área afectada. Esto permitirá obtener datos más precisos y actualizados sobre la cantidad y tipo de vegetación forestal presente.\n\nAdemás, es importante implementar medidas para minimizar los errores futuros, como:\n\n* Utilizar métodos de medición más precisos y eficientes.\n* Realizar muestreos representativos y sistemáticos en el área de estudio.\n* Entrenar a los personal del inventario en técnicas de medición y conteo forestal.\n\nAl implementar estas medidas, podremos mejorar la precisión de nuestros inventarios y tener una visión más precisa sobre la situación actual de nuestra vegetación forestal."
+    }
+}

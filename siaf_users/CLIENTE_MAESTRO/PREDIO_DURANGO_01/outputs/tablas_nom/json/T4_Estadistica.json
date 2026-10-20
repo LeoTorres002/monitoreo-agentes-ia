@@ -1,0 +1,12 @@
+{
+    "tecnico": {
+        "vta": 306.87,
+        "error": 16.58,
+        "sitios": 120
+    },
+    "legal": {
+        "limite": 10.0,
+        "cumple": false,
+        "dictamen": "Como Perito Forestal en Durango, puedo emitir el siguiente dictamen:\n\n\"La superficie de 1500.0ha analizada presenta un límite del 10.0%, lo que indica una buena distribución y heterogeneidad en la estructura de la vegetación forestal, cumpliendo con los estándares normativos. Sin embargo, es importante mencionar que el error de muestreo alcanza un 16.58%, lo que puede afectar la precisión de los resultados y requerir una mayor muestra para garantizar la confiabilidad de los datos. En general, se cumple con los requisitos normativos en cuanto a la distribución y estructura de la vegetación forestal, aunque es necesario considerar la posibilidad de efectuar un ajuste en el método de muestreo para mejorar la precisión de los resultados.\""
+    }
+}

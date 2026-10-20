@@ -1,0 +1,11 @@
+# Ignorar bases de datos locales de los agentes
+**/__pycache__/
+*.pyc
+.env
+
+# IGNORAR DATOS SENSIBLES (Esto se queda en Durango/Nube, no en el código)
+../../siaf_users/
+../../rag_documents/*.pdf
+outputs/
+inputs/
+

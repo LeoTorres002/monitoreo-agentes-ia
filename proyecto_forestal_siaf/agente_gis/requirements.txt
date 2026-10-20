@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+numpy
+matplotlib
+pillow
+# GDAL/OGR y PyQGIS llegan con el paquete del sistema python3-qgis (ver Dockerfile).
+# El agente usa urllib (stdlib) para descargar teselas; no requiere requests.
+
+# Variables de entorno opcionales (ver cartografia.py):
+#   SIAF_DATA_ROOT          raíz de datos (host dev) — por defecto /data
+#   SIAF_DESCARGAR_TILES    "0" desactiva fondo satelital y MDE
+#   SIAF_TILE_SATELITE      plantilla XYZ del fondo satelital
+#   SIAF_TILE_DEM           plantilla XYZ del MDE (terrarium)
+#   SIAF_OSM / SIAF_OSM_URL capa opcional de caminos/hidrografía
+#   SIAF_ANCHO_RASTER_PX    resolución del ráster reproyectado (por defecto 1600)

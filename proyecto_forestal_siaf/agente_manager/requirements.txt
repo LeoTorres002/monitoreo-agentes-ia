@@ -1,0 +1,7 @@
+crewai
+langchain-ollama
+fastapi
+uvicorn
+pandas
+numpy
+requests

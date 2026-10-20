@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-ollama
+langchain-chroma
+langchain-openai>=0.1.0,<0.2.0
+pypdf
+python-dotenv

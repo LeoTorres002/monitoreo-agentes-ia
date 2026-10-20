@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+numpy
+pypdf
+xlrd
+openpyxl
+langchain-openai>=0.1.0,<0.2.0
+pyyaml
+requests
+python-dotenv

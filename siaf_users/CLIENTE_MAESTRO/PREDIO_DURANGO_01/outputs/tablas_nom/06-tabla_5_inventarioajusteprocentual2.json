@@ -1,0 +1,13 @@
+{
+    "resultados_tecnicos": {
+        "vta_m3": 306.87,
+        "error_pct": 16.58,
+        "sitios": 120,
+        "superficie_informada_ha": 1500.0
+    },
+    "dictamen_ia": {
+        "limite_nom_aplicado": "10.0% (Numeral 4.9.2)",
+        "cumple_norma": false,
+        "analisis_profesional": "Dictamen profesional:\n\nSe ha determinado que el proyecto actual no cumple con los límites establecidos en la Norma Oficial Mexicana NOM-152, numeral 4.9.2, ya que la superficie del predio es de 1500 hectáreas y el error calculado es de 16.58%, lo que supera el límite permitido de 10% para superficies mayores a 95 ha.\n\nEn este sentido, como Perito Forestal en Durango, México, puedo concluir que la falta de precisión en la estimación de la superficie y el error calculado es significativo y no cumple con los estándares establecidos. Esto puede generar incertidumbre y afectar negativamente la toma de decisiones para la gestión sostenible del predio.\n\nRecomendación técnica:\n\nPara que el proyecto cumpla con las normas, es necesario realizar un nuevo cálculo de la superficie y evaluar nuevamente el error. Es importante considerar factores como la precisión en la medición de la superficie, la calidad de los datos y la aplicación correcta de los métodos de estimación. Si se verifica que el error calculado sigue siendo superior al límite permitido, se recomienda realizar ajustes o correcciones para garantizar la precisión y confiabilidad de los resultados.\n\nEn conclusión, como Perito Forestal, me comprometo a trabajar en estrecha colaboración con el equipo del proyecto para garantizar que se cumplan los estándares establecidos y se logren objetivos sostenibles para la gestión forestal."
+    }
+}
