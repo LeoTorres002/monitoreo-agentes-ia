@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-white antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo Agentes de IA — Estadísticas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: { ink: '#32b118', hover: '#3dc920' },
+                        midnight: { ink: '#061b31' },
+                        slate: '#64748d', steel: '#50617a', smoke: '#839bc8',
+                        mist: '#f4fbf3', frost: '#e5edf5'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="min-h-full flex flex-col bg-white text-midnight-ink font-light">
+
+    <!-- NAV -->
+    <header class="h-[76px] border-b border-frost bg-white sticky top-0 z-50 flex items-center">
+        <div class="max-w-[1320px] w-full mx-auto px-4 sm:px-6 flex items-center justify-between gap-2">
+            <div class="flex items-center space-x-3 sm:space-x-8 min-w-0">
+                <a href="../index.html" class="text-[16px] sm:text-[20px] font-normal tracking-tight flex items-center gap-2 shrink-0">
+                    <span class="w-2.5 h-2.5 bg-indigo-ink rounded-sm shrink-0"></span>
+                    <span class="truncate">Monitoreo agentes IA</span>
+                </a>
+                <!-- NAVEGACIÓN CON MAYOR ESPACIADO EN CELULARES -->
+                <nav class="flex items-center space-x-4 sm:space-x-6 text-[13px] sm:text-[14px] font-normal">
+                    <a href="../index.html" class="hover:text-indigo-ink transition-colors py-1 px-0.5">Inicio</a>
+                    <a href="monitoring.html" class="hover:text-indigo-ink transition-colors py-1 px-0.5">Monitoreo</a>
+                    <a href="statistics.html" class="text-indigo-ink py-1 px-0.5">Estadísticas</a>
+                </nav>
+            </div>
+            <span class="inline-flex items-center px-2 sm:px-2.5 py-1 rounded-full text-[11px] sm:text-[12px] bg-mist border border-frost text-steel shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate mr-1.5 sm:mr-2" id="status-dot"></span>
+                <span id="status-text">Inactivo</span>
+            </span>
+
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-[1320px] w-full mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10 sm:space-y-12">
+        <div>
+            <p class="text-[12px] text-smoke uppercase tracking-[0.5px]">Resultados & Métricas</p>
+            <h1 class="text-[28px] sm:text-[38px] md:text-[48px] leading-[1.03] tracking-heading-lg text-midnight-ink mt-1">
+                Ventana de Estadísticas
+            </h1>
+        </div>
+
+        <!-- BLOQUES MONUMENTALES DE MÉTRICAS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 py-4">
+            <div class="space-y-1">
+                <p class="text-[42px] sm:text-[56px] leading-[1.03] tracking-display text-midnight-ink" id="stat-records">0</p>
+                <p class="text-[14px] font-normal text-slate">Registros CSV Procesados</p>
+            </div>
+            <div class="space-y-1">
+                <p class="text-[42px] sm:text-[56px] leading-[1.03] tracking-display text-midnight-ink" id="stat-polygons">0</p>
+                <p class="text-[14px] font-normal text-slate">Polígonos Shapefile Válidos</p>
+            </div>
+            <div class="space-y-1">
+                <p class="text-[42px] sm:text-[56px] leading-[1.03] tracking-display text-midnight-ink" id="stat-latency">0<span class="text-[22px] sm:text-[26px]">ms</span></p>
+                <p class="text-[14px] font-normal text-slate">Latencia Promedio de Red</p>
+            </div>
+            <div class="space-y-1">
+                <p class="text-[42px] sm:text-[56px] leading-[1.03] tracking-display text-midnight-ink" id="stat-efficiency">0<span class="text-[22px] sm:text-[26px]">%</span></p>
+                <p class="text-[14px] font-normal text-slate">Índice Coincidencia Espacial</p>
+            </div>
+
+        <!-- BOTONES DE ACCIÓN PARA ESTADÍSTICAS -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 pt-4">
+            <button id="btn-refresh-stats" class="w-full sm:w-auto min-w-[220px] h-[48px] px-8 bg-indigo-ink hover:bg-indigo-hover text-white text-[14px] font-normal rounded-md transition-colors flex items-center justify-center space-x-2 shrink-0">
+                <span>Actualizar estadísticas</span>
+            </button>
+            <button id="btn-delete-stats" class="w-full sm:w-auto min-w-[220px] h-[48px] px-8 border border-frost text-indigo-ink hover:bg-mist text-[14px] font-normal rounded-md transition-colors flex items-center justify-center space-x-2 shrink-0">
+                <span>Eliminar estadísticas</span>
+            </button>
+        </div>
+
+        </div>
+
+        <hr class="border-t border-frost my-0" />
+
+        <!-- TABLA DESGLOSE -->
+        <div class="bg-white border border-frost rounded-md overflow-hidden">
+            <div class="px-6 sm:px-8 py-6 border-b border-frost bg-mist">
+                <h3 class="text-[18px] font-normal text-midnight-ink">Resumen de Ejecución por Dataset</h3>
+            </div>
+            <div class="divide-y divide-frost text-[13px] sm:text-[14px]">
+                <div class="px-6 sm:px-8 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span class="text-steel font-normal">Estado Telemetría CSV 1</span>
+                    <span id="stat-csv1-file" class="font-normal text-slate truncate">Pendiente</span>
+                </div>
+                <div class="px-6 sm:px-8 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span class="text-steel font-normal">Estado Eventos CSV 2</span>
+                    <span id="stat-csv2-file" class="font-normal text-slate truncate">Pendiente</span>
+                </div>
+                <div class="px-6 sm:px-8 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <span class="text-steel font-normal">Validación Capa Shapefile</span>
+                    <span id="stat-shape-file" class="font-normal text-slate truncate">Pendiente</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>

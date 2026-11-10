@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+:root {
+  /* Tokens de Color */
+  --color-indigo-ink: #32b118;
+  --color-indigo-ink-hover: #59d240;
+  --color-midnight-ink: #061b31;
+  --color-slate: #64748d;
+  --color-steel: #50617a;
+  --color-smoke: #839bc8;
+  --color-mist: #f8fafd;
+  --color-frost: #e5edf5;
+  --color-lavender-border: #59d240;
+  --color-periwinkle-wash: #eafbe6;
+
+  /* Tipografía y Layout */
+  --font-sohne-var: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --page-max-width: 1320px;
+  --radius-md: 4px;
+
+  /* Safe Area Insets para dispositivos móviles y plegables */
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+/* Base resets y consistencia responsiva */
+*, ::before, ::after {
+  box-sizing: border-border-box;
+}
+
+html {
+  /* Control de desplazamiento suave respetando preferencias de accesibilidad */
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sohne-var);
+  font-feature-settings: "ss01" on, "tnum" on;
+  color: var(--color-midnight-ink);
+  background-color: #ffffff;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  
+  /* Soporte para Notches y barras gestuales (Safe Area) */
+  padding-top: var(--sat);
+  padding-right: var(--sar);
+  padding-bottom: var(--sab);
+  padding-left: var(--sal);
+}
+
+/* Tipografía Fluida (Escalado dinámico sin breakpoint rígido) */
+.tracking-display { 
+  letter-spacing: -1.4px; 
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+}
+.tracking-heading-lg { 
+  letter-spacing: -0.96px; 
+  font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+}
+.tracking-heading { 
+  letter-spacing: -0.64px; 
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+}
+.tracking-heading-sm { 
+  letter-spacing: -0.26px; 
+  font-size: clamp(1.25rem, 1.5vw + 0.8rem, 1.5rem);
+}
+.tracking-subheading { 
+  letter-spacing: -0.22px; 
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+}
+.tracking-body { 
+  letter-spacing: -0.16px; 
+  font-size: clamp(0.875rem, 0.5vw + 0.75rem, 1rem);
+}
+
+/* Scrollbar plano accesible */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track { 
+  background: var(--color-mist); 
+}
+::-webkit-scrollbar-thumb { 
+  background: var(--color-frost); 
+  border-radius: var(--radius-md); 
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: var(--color-smoke); 
+}
+
+/* Transiciones interactivas optimizadas para GPU */
+.card-upload-container {
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-color;
+}
+
+.card-upload-container .drop-zone {
+  transition: border-color 0.2s ease 0.1s, background-color 0.2s ease 0.1s;
+  will-change: border-color, background-color;
+}
+
+/* Hover accesible: Se activa únicamente en dispositivos con cursor preciso (Mouse/Trackpad) */
+@media (hover: hover) and (pointer: fine) {
+  .card-upload-container:hover {
+    border-color: var(--color-indigo-ink) !important;
+  }
+  
+  .card-upload-container:hover .drop-zone {
+    border-color: var(--color-indigo-ink) !important;
+    background-color: var(--color-periwinkle-wash) !important;
+  }
+}
+
+/* Estados activos/foco para pantallas táctiles (Touch Devices) */
+.card-upload-container:active,
+.card-upload-container:focus-within {
+  border-color: var(--color-indigo-ink) !important;
+}
+
+.card-upload-container:active .drop-zone,
+.card-upload-container:focus-within .drop-zone {
+  border-color: var(--color-indigo-ink) !important;
+  background-color: var(--color-periwinkle-wash) !important;
+}
+
+/* Dispositivos muy pequeños, plegables cerrados o vistas compactas (< 360px) */
+@media (max-width: 359.98px) {
+  .card-upload-container {
+    padding: 1rem !important;
+  }
+  
+  .drop-zone {
+    padding: 1rem !important;
+  }
+}
+
+/* Plegables dual-screen o estado desplegado horizontal */
+@media (horizontal-viewport-segments: 2) {
+  body {
+    max-width: 100vw;
+  }
+}
+
+/* Monitores Ultra-Wide / 4K (> 1920px) */
+@media (min-width: 1920px) {
+  :root {
+    --page-max-width: 1600px;
+  }
+}
+
+/* Adaptación para usuarios que prefieren reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
